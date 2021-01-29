@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const MainNav = MenuButton.parentElement.parentElement;
 
     // updating fuctionalities predefined for minimum fuctionality if no JS
+    document.querySelector("body").style.paddingTop = "100px";
     MainNav.style.position = "fixed";
     MainNav.classList.add ("menu-hidden");
 

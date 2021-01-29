@@ -16,7 +16,6 @@ body {
   font-size: 16px;
   background: $color-white;
   color: $color-black;
-  padding-top: 100px;
 }
 
 p,
@@ -68,7 +67,7 @@ button {
 // MAIN NAV
 #main-nav {
   background: $color-blue-main;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   height: 100vh;
