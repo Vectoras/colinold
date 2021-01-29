@@ -453,7 +453,7 @@ button {
       }
     }
 
-    .column {
+    &#teaching-resources-list {
       // folder
       .folder {
         position: relative;
@@ -499,28 +499,27 @@ button {
             margin: 0 0 0 1rem;
           }
 
+          &::before {
+            content: "";
+            font-family: "FontAwesome";
+            font-size: 1.3rem;
+            display: block;
+            position: absolute;
+            left: 1rem;
+          }
+
           &.closed {
             height: 1.5rem;
             overflow: hidden;
 
             &::before {
               content: "\f07b";
-              font-family: "FontAwesome";
-              font-size: 1.3rem;
-              display: block;
-              position: absolute;
-              left: 1rem;
             }
           }
 
           &.opened {
             &::before {
               content: "\f07c";
-              font-family: "FontAwesome";
-              font-size: 1.3rem;
-              display: block;
-              position: absolute;
-              left: 1rem;
             }
           }
 

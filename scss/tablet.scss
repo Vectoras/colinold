@@ -28,7 +28,41 @@ h3 {
   text-decoration: none;
   color: $color-black;
   border: none;
-  background: $color-green-main;
+  position: relative;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-green-main;
+    transition: color 0.5s ease-in-out, width 1s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-green-main;
+    transition: color 0.5s ease-in-out, width 1s ease-in-out;
+  }
+
+  &:hover {
+    background: $color-green-main;
+    color: $color-white;
+
+    &::after,
+    &::before {
+      background: $color-white;
+      width: 0;
+    }
+  }
 }
 
 /* Utilities */
@@ -79,6 +113,7 @@ h3 {
       flex: 0 0 33rem;
 
       a {
+        position: relative;
         display: inline-block;
         width: initial;
         padding: 0;
@@ -88,11 +123,27 @@ h3 {
         color: $color-yellow-main;
         font-size: 1.5rem;
         font-family: "Cinzel", serif;
-        border-bottom: solid 1px transparent;
+        // border-bottom: solid 1px transparent;
 
+        &::after {
+          content: "";
+          background: $color-yellow-main;
+          width: 0;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover,
         &.active {
           text-decoration: none;
-          border-bottom: solid 1px $color-yellow-main;
+          // border-bottom: solid 1px $color-yellow-main;
+
+          &::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -395,9 +446,29 @@ h3 {
       }
 
       main {
-        grid-area: text;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+        .folder {
+          width: 33.3%;
+          &::before {
+            font-size: 1.5rem;
+          }
+
+          .subfolder {
+            &::before {
+              font-size: 1.5rem;
+            }
+
+            .file {
+              &::before {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
       }
     }
   }

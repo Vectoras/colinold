@@ -431,18 +431,18 @@ button {
   margin: 0.5rem 0;
 }
 
-.service-section article .column .folder {
+.service-section article#teaching-resources-list .folder {
   position: relative;
   margin: 0.5rem 0;
 }
 
-.service-section article .column .folder > p {
+.service-section article#teaching-resources-list .folder > p {
   font-weight: 900;
   padding-left: 2rem;
   margin: 0 0;
 }
 
-.service-section article .column .folder::before {
+.service-section article#teaching-resources-list .folder::before {
   content: "";
   font-family: "FontAwesome";
   font-size: 1.3rem;
@@ -451,63 +451,62 @@ button {
   left: 0;
 }
 
-.service-section article .column .folder.closed {
+.service-section article#teaching-resources-list .folder.closed {
   height: 1.5rem;
   overflow: hidden;
 }
 
-.service-section article .column .folder.closed::before {
+.service-section article#teaching-resources-list .folder.closed::before {
   content: "\f07b";
 }
 
-.service-section article .column .folder.opened::before {
+.service-section article#teaching-resources-list .folder.opened::before {
   content: "\f07c";
 }
 
-.service-section article .column .folder .subfolder {
+.service-section article#teaching-resources-list .folder .subfolder {
   padding-left: 2rem;
   margin: 0.3rem 0;
   position: relative;
 }
 
-.service-section article .column .folder .subfolder > p {
+.service-section article#teaching-resources-list .folder .subfolder > p {
   font-weight: bold;
   margin: 0 0 0 1rem;
 }
 
-.service-section article .column .folder .subfolder.closed {
+.service-section article#teaching-resources-list .folder .subfolder::before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 1rem;
+}
+
+.service-section article#teaching-resources-list .folder .subfolder.closed {
   height: 1.5rem;
   overflow: hidden;
 }
 
-.service-section article .column .folder .subfolder.closed::before {
+.service-section article#teaching-resources-list .folder .subfolder.closed::before {
   content: "\f07b";
-  font-family: "FontAwesome";
-  font-size: 1.3rem;
-  display: block;
-  position: absolute;
-  left: 1rem;
 }
 
-.service-section article .column .folder .subfolder.opened::before {
+.service-section article#teaching-resources-list .folder .subfolder.opened::before {
   content: "\f07c";
-  font-family: "FontAwesome";
-  font-size: 1.3rem;
-  display: block;
-  position: absolute;
-  left: 1rem;
 }
 
-.service-section article .column .folder .subfolder .file {
+.service-section article#teaching-resources-list .folder .subfolder .file {
   padding-left: 0.4rem;
   margin: 0.2rem 0;
 }
 
-.service-section article .column .folder .subfolder .file > p {
+.service-section article#teaching-resources-list .folder .subfolder .file > p {
   margin: 0 0 0 1rem;
 }
 
-.service-section article .column .folder .subfolder .file::before {
+.service-section article#teaching-resources-list .folder .subfolder .file::before {
   content: "";
   font-family: "FontAwesome";
   font-size: 1.3rem;
@@ -516,27 +515,27 @@ button {
   left: 2rem;
 }
 
-.service-section article .column .folder .subfolder .file.pdf::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.pdf::before {
   content: "\f1c1";
 }
 
-.service-section article .column .folder .subfolder .file.doc::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.doc::before {
   content: "\f1c2";
 }
 
-.service-section article .column .folder .subfolder .file.xls::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.xls::before {
   content: "\f1c3";
 }
 
-.service-section article .column .folder .subfolder .file.ppt::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.ppt::before {
   content: "\f1c4";
 }
 
-.service-section article .column .folder .subfolder .file.image::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.image::before {
   content: "\f1c5";
 }
 
-.service-section article .column .folder .subfolder .file.unknown::before {
+.service-section article#teaching-resources-list .folder .subfolder .file.unknown::before {
   content: "\f15b";
 }
 

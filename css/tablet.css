@@ -26,7 +26,43 @@ h3 {
   text-decoration: none;
   color: #08211b;
   border: none;
+  position: relative;
+  -webkit-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
   background: #29b797;
+  -webkit-transition: color 0.5s ease-in-out, width 1s ease-in-out;
+  transition: color 0.5s ease-in-out, width 1s ease-in-out;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #29b797;
+  -webkit-transition: color 0.5s ease-in-out, width 1s ease-in-out;
+  transition: color 0.5s ease-in-out, width 1s ease-in-out;
+}
+
+.button:hover {
+  background: #29b797;
+  color: #eefbf8;
+}
+
+.button:hover::after, .button:hover::before {
+  background: #eefbf8;
+  width: 0;
 }
 
 /* Utilities */
@@ -95,6 +131,7 @@ h3 {
 }
 
 #main-nav .container #nav-buttons a {
+  position: relative;
   display: inline-block;
   width: initial;
   padding: 0;
@@ -104,12 +141,26 @@ h3 {
   color: #ebcb63;
   font-size: 1.5rem;
   font-family: "Cinzel", serif;
-  border-bottom: solid 1px transparent;
 }
 
-#main-nav .container #nav-buttons a.active {
+#main-nav .container #nav-buttons a::after {
+  content: "";
+  background: #ebcb63;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav .container #nav-buttons a:hover, #main-nav .container #nav-buttons a.active {
   text-decoration: none;
-  border-bottom: solid 1px #ebcb63;
+}
+
+#main-nav .container #nav-buttons a:hover::after, #main-nav .container #nav-buttons a.active::after {
+  width: 100%;
 }
 
 #hero-section {
@@ -418,14 +469,33 @@ h3 {
 }
 
 .service-section article#teaching-resources-list main {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: text;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.service-section article#teaching-resources-list main .folder {
+  width: 33.3%;
+}
+
+.service-section article#teaching-resources-list main .folder::before {
+  font-size: 1.5rem;
+}
+
+.service-section article#teaching-resources-list main .folder .subfolder::before {
+  font-size: 1.5rem;
+}
+
+.service-section article#teaching-resources-list main .folder .subfolder .file::before {
+  font-size: 1.5rem;
 }
 
 .steps {
