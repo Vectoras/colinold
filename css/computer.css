@@ -111,6 +111,28 @@ h3 {
 
 #testimonials-container #testimonials {
   width: 80%;
+  scroll-behavior: smooth;
+  /* Works on Firefox */
+  /* Works on Chrome, Edge, and Safari */
+}
+
+#testimonials-container #testimonials {
+  scrollbar-width: thin;
+  scrollbar-color: #29b797 #eefbf8;
+}
+
+#testimonials-container #testimonials::-webkit-scrollbar {
+  width: 1rem;
+}
+
+#testimonials-container #testimonials::-webkit-scrollbar-track {
+  background: #eefbf8;
+}
+
+#testimonials-container #testimonials::-webkit-scrollbar-thumb {
+  background-color: #29b797;
+  border-radius: 0.5rem;
+  border: 3px solid #eefbf8;
 }
 
 #main-footer {
@@ -143,7 +165,7 @@ h3 {
 
 #outside-of-school article img {
   margin: 0 calc((calc(1200px + 4rem) - 4rem) / 12);
-  height: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+  height: calc((calc(1200px + 4rem) - 4rem) / 12 & 4 - 1rem);
   width: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
 }
 
