@@ -213,12 +213,20 @@ h3 {
   font-size: 1.7rem;
 }
 
+.service-section article#teaching-resources-list main .folder.closed {
+  height: 2rem;
+}
+
 .service-section article#teaching-resources-list main .folder .subfolder p {
   margin-left: 1.5rem;
 }
 
 .service-section article#teaching-resources-list main .folder .subfolder::before {
   font-size: 1.7rem;
+}
+
+.service-section article#teaching-resources-list main .folder .subfolder.closed {
+  height: 2rem;
 }
 
 .service-section article#teaching-resources-list main .folder .subfolder .file p {

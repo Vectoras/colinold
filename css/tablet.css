@@ -220,7 +220,7 @@ h3 {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 4fr 5fr;
       grid-template-rows: 4fr 5fr;
-  justify-: center;
+  justify-items: center;
   padding: 2rem 0;
 }
 
@@ -467,6 +467,10 @@ h3 {
 
 .service-section article#why-me main h3 {
   margin: 0;
+}
+
+.service-section article#teaching-resources-list {
+  min-height: 40rem;
 }
 
 .service-section article#teaching-resources-list h3 {

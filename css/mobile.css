@@ -432,18 +432,28 @@ button {
   margin: 0.5rem 0;
 }
 
-.service-section article#teaching-resources-list .folder {
-  position: relative;
-  margin: 0.5rem 0;
+.service-section article#teaching-resources-list {
+  min-height: 95vh;
 }
 
-.service-section article#teaching-resources-list .folder > p {
+.service-section article#teaching-resources-list main {
+  padding: 1rem;
+}
+
+.service-section article#teaching-resources-list main .folder {
+  position: relative;
+  margin: 0.5rem 0;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+.service-section article#teaching-resources-list main .folder > p {
   font-weight: 900;
   padding-left: 2rem;
   margin: 0 0;
 }
 
-.service-section article#teaching-resources-list .folder::before {
+.service-section article#teaching-resources-list main .folder::before {
   content: "";
   font-family: "FontAwesome";
   font-size: 1.3rem;
@@ -452,31 +462,33 @@ button {
   left: 0;
 }
 
-.service-section article#teaching-resources-list .folder.closed {
+.service-section article#teaching-resources-list main .folder.closed {
   height: 1.5rem;
   overflow: hidden;
 }
 
-.service-section article#teaching-resources-list .folder.closed::before {
+.service-section article#teaching-resources-list main .folder.closed::before {
   content: "\f07b";
 }
 
-.service-section article#teaching-resources-list .folder.opened::before {
+.service-section article#teaching-resources-list main .folder.opened::before {
   content: "\f07c";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder {
+.service-section article#teaching-resources-list main .folder .subfolder {
   padding-left: 2rem;
   margin: 0.3rem 0;
   position: relative;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder > p {
+.service-section article#teaching-resources-list main .folder .subfolder > p {
   font-weight: bold;
   margin: 0 0 0 1rem;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder::before {
+.service-section article#teaching-resources-list main .folder .subfolder::before {
   content: "";
   font-family: "FontAwesome";
   font-size: 1.3rem;
@@ -485,29 +497,29 @@ button {
   left: 1rem;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder.closed {
+.service-section article#teaching-resources-list main .folder .subfolder.closed {
   height: 1.5rem;
   overflow: hidden;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder.closed::before {
+.service-section article#teaching-resources-list main .folder .subfolder.closed::before {
   content: "\f07b";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder.opened::before {
+.service-section article#teaching-resources-list main .folder .subfolder.opened::before {
   content: "\f07c";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file {
+.service-section article#teaching-resources-list main .folder .subfolder .file {
   padding-left: 0.4rem;
   margin: 0.2rem 0;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file > p {
+.service-section article#teaching-resources-list main .folder .subfolder .file > p {
   margin: 0 0 0 1rem;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file::before {
   content: "";
   font-family: "FontAwesome";
   font-size: 1.3rem;
@@ -516,27 +528,27 @@ button {
   left: 2rem;
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.pdf::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.pdf::before {
   content: "\f1c1";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.doc::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.doc::before {
   content: "\f1c2";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.xls::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.xls::before {
   content: "\f1c3";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.ppt::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.ppt::before {
   content: "\f1c4";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.image::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.image::before {
   content: "\f1c5";
 }
 
-.service-section article#teaching-resources-list .folder .subfolder .file.unknown::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.unknown::before {
   content: "\f15b";
 }
 

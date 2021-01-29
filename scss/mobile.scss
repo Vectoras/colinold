@@ -455,49 +455,20 @@ button {
     }
 
     &#teaching-resources-list {
-      // folder
-      .folder {
-        position: relative;
-        margin: 0.5rem 0;
+      min-height: 95vh;
 
-        & > p {
-          font-weight: 900;
-          padding-left: 2rem;
-          margin: 0 0;
-        }
-
-        &::before {
-          content: "";
-          font-family: "FontAwesome";
-          font-size: 1.3rem;
-          display: block;
-          position: absolute;
-          left: 0;
-        }
-
-        &.closed {
-          height: 1.5rem;
-          overflow: hidden;
-          &::before {
-            content: "\f07b";
-          }
-        }
-
-        &.opened {
-          &::before {
-            content: "\f07c";
-          }
-        }
-
-        // subfolder
-        .subfolder {
-          padding-left: 2rem;
-          margin: 0.3rem 0;
+      main {
+        padding: 1rem;
+        // folder
+        .folder {
           position: relative;
+          margin: 0.5rem 0;
+          transition: height 0.5s ease-in-out;
 
           & > p {
-            font-weight: bold;
-            margin: 0 0 0 1rem;
+            font-weight: 900;
+            padding-left: 2rem;
+            margin: 0 0;
           }
 
           &::before {
@@ -506,13 +477,12 @@ button {
             font-size: 1.3rem;
             display: block;
             position: absolute;
-            left: 1rem;
+            left: 0;
           }
 
           &.closed {
             height: 1.5rem;
             overflow: hidden;
-
             &::before {
               content: "\f07b";
             }
@@ -524,12 +494,15 @@ button {
             }
           }
 
-          // file
-          .file {
-            padding-left: 0.4rem;
-            margin: 0.2rem 0;
+          // subfolder
+          .subfolder {
+            padding-left: 2rem;
+            margin: 0.3rem 0;
+            position: relative;
+            transition: height 0.5s ease-in-out;
 
             & > p {
+              font-weight: bold;
               margin: 0 0 0 1rem;
             }
 
@@ -539,31 +512,65 @@ button {
               font-size: 1.3rem;
               display: block;
               position: absolute;
-              left: 2rem;
+              left: 1rem;
             }
 
-            &.pdf::before {
-              content: "\f1c1";
+            &.closed {
+              height: 1.5rem;
+              overflow: hidden;
+
+              &::before {
+                content: "\f07b";
+              }
             }
 
-            &.doc::before {
-              content: "\f1c2";
+            &.opened {
+              &::before {
+                content: "\f07c";
+              }
             }
 
-            &.xls::before {
-              content: "\f1c3";
-            }
+            // file
+            .file {
+              padding-left: 0.4rem;
+              margin: 0.2rem 0;
 
-            &.ppt::before {
-              content: "\f1c4";
-            }
+              & > p {
+                margin: 0 0 0 1rem;
+              }
 
-            &.image::before {
-              content: "\f1c5";
-            }
+              &::before {
+                content: "";
+                font-family: "FontAwesome";
+                font-size: 1.3rem;
+                display: block;
+                position: absolute;
+                left: 2rem;
+              }
 
-            &.unknown::before {
-              content: "\f15b";
+              &.pdf::before {
+                content: "\f1c1";
+              }
+
+              &.doc::before {
+                content: "\f1c2";
+              }
+
+              &.xls::before {
+                content: "\f1c3";
+              }
+
+              &.ppt::before {
+                content: "\f1c4";
+              }
+
+              &.image::before {
+                content: "\f1c5";
+              }
+
+              &.unknown::before {
+                content: "\f15b";
+              }
             }
           }
         }

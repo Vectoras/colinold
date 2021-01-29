@@ -234,6 +234,10 @@ h3 {
             font-size: 1.7rem;
           }
 
+          &.closed {
+            height: 2rem;
+          }
+
           .subfolder {
             p {
               margin-left: 1.5rem;
@@ -241,6 +245,10 @@ h3 {
 
             &::before {
               font-size: 1.7rem;
+            }
+
+            &.closed {
+              height: 2rem;
             }
 
             .file {
