@@ -1,0 +1,215 @@
+/* General */
+p,
+a {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.button {
+  font-size: 1.2rem;
+}
+
+/* Utilities */
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: calc(1200px + 4rem);
+  margin: 0 auto;
+}
+
+#main-nav .container #logo img {
+  max-width: 12rem;
+}
+
+#hero-section .hero-positioning {
+  width: 100%;
+}
+
+#hero-section .hero-positioning .container h1 {
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 7 - 1rem);
+}
+
+#hero-section .hero-positioning .container p {
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 7 - 1rem);
+}
+
+#hero-section .hero-positioning .container #services-buttons {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 7 - 1rem);
+}
+
+#hero-section .hero-positioning .container #services-buttons .button {
+  padding: 1.5rem 2rem;
+}
+
+#stats .stat {
+  max-width: 15rem;
+}
+
+#stats .stat i {
+  font-size: 5rem;
+  line-height: 6rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+#stats .stat-number {
+  font-size: 5rem;
+}
+
+#success-stories .success-story img {
+  margin: 0 calc((calc(1200px + 4rem) - 4rem) / 12);
+  height: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+}
+
+#success-stories .success-story p {
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 6 - 1rem);
+}
+
+#testimonials-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#testimonials-container i {
+  display: block;
+  font-size: 2rem;
+  color: #29b797;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+}
+
+#testimonials-container i:hover {
+  color: #176452;
+}
+
+#testimonials-container #testimonials {
+  width: 80%;
+}
+
+#main-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-footer section#main-footer-left {
+  display: block;
+}
+
+#main-footer-left p {
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#main-footer-credit {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#outside-of-school article img {
+  margin: 0 calc((calc(1200px + 4rem) - 4rem) / 12);
+  height: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+}
+
+#outside-of-school article main {
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 6 - 1rem);
+}
+
+#outside-of-school article h3 {
+  margin: 0 calc((calc(1200px + 4rem) - 4rem) / 12);
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 4 - 1rem);
+}
+
+#services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+#services .service {
+  width: 30%;
+}
+
+.service-header h2 {
+  margin-right: 8rem;
+}
+
+.service-section article {
+  margin-bottom: 5rem;
+}
+
+.service-section article#why-me img {
+  height: calc((calc(1200px + 4rem) - 4rem) / 12 * 5 - 1rem);
+  width: calc((calc(1200px + 4rem) - 4rem) / 12 * 5 - 1rem);
+}
+
+.steps {
+  margin-top: 8rem;
+  padding: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+}
+
+.steps .step {
+  padding: 0;
+  width: auto;
+  margin: 0;
+}
+
+.steps .step header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.steps .step p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}

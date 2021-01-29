@@ -1,0 +1,692 @@
+// imports
+
+@import "config";
+
+/* General */
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  background: $color-white;
+  color: $color-black;
+}
+
+p,
+a {
+  font-size: 1.2rem;
+  font-family: "Overlock", cursive;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+  font-weight: normal;
+  color: $color-blue-light-1;
+  padding: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
+
+a {
+  color: $color-red-main;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input,
+button {
+  outline: none;
+}
+
+/* Utilities */
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+// MAIN NAV
+#main-nav {
+  background: $color-blue-main;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+
+  .container {
+    // logo
+    #logo {
+      display: block;
+      margin: 2rem 0rem 0rem 0rem;
+
+      img {
+        width: 11rem;
+      }
+    }
+
+    // open/close menu button (only mobile)
+    #button-menu-mobile {
+      display: block;
+      height: 60px;
+      width: 60px;
+      background: url("/images/icons/mobile-menu-close.svg");
+      position: absolute;
+      top: 20px;
+      right: 1rem;
+    }
+
+    // navigation buttons
+    #nav-buttons {
+      margin-top: 3rem;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 1.5rem 0;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-yellow-main;
+        font-size: 2rem;
+        font-family: "Cinzel", serif;
+
+        &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // hidden status (only on mobile)
+  &.menu-hidden {
+    height: 100px;
+
+    #button-menu-mobile {
+      background: url("/images/icons/mobile-menu-open.svg");
+    }
+  }
+}
+
+// -- Home PAGE
+
+// HERO
+#hero-section {
+  height: calc(100vh - 100px);
+  padding-top: 17rem;
+  background: lightgray;
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    padding: 0.5rem 0;
+  }
+
+  // hidding some elements on mobile due to not enough space
+  p:last-of-type {
+    display: none;
+  }
+
+  #services-buttons {
+    display: none;
+  }
+}
+
+// STATS
+#stats {
+  background: $color-blue-main;
+  color: $color-white;
+
+  .container {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .stat {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: auto auto;
+      justify-items: center;
+      align-items: center;
+      padding: 2rem 0;
+
+      i {
+        display: block;
+        // margin: 2rem 0;
+        font-size: 5rem;
+        grid-row: 1 / span 2;
+      }
+
+      &-number {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      &-text {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// SUCCESS STORIES
+#success-stories {
+  padding-bottom: 1rem;
+
+  .success-story {
+    p {
+      padding-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 100vw;
+      margin-left: -1rem;
+    }
+
+    &:last-child {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// TESTIMONIALS
+#testimonials-container {
+  i {
+    display: none;
+  }
+
+  #testimonials {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    align-items: center;
+
+    .testimonial {
+      flex: 0 0 100%;
+      padding: 1rem 1rem 2rem;
+      text-align: center;
+
+      &-message {
+        font-family: "Dancing Script", cursive;
+        color: $color-blue-light-2;
+        font-size: 1.5rem;
+      }
+
+      &-name {
+        margin-top: 1rem;
+        font-family: "Cinzel", serif;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// FOOTER
+#main-footer {
+  background: $color-blue-main;
+  color: $color-white;
+  padding: 2rem 0 0;
+
+  section {
+    // only display on computer
+    &#main-footer-left {
+      display: none;
+    }
+
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-footer-content {
+      width: 14rem;
+      margin: 0 auto;
+
+      a {
+        display: block;
+        color: $color-white;
+      }
+
+      p,
+      a {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  &-middle h3 {
+    margin: 0 0 2rem; // first
+  }
+
+  &-right h3 {
+    margin: 3rem 0 2rem;
+  }
+
+  &-credit {
+    margin: 2rem 1rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid $color-white;
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// -- About Me PAGE --
+
+// ABOUT ME
+#about-me {
+  padding-top: 1px;
+
+  article {
+    h2 {
+      width: 100%;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 10rem;
+      margin: 0 auto 2rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+// OUTSIDE OF SCHOOL
+#outside-of-school {
+  padding-top: 1px;
+
+  h2 {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  article {
+    margin-bottom: 3rem;
+
+    img {
+      width: 100vw;
+      margin: 0 0 0.5rem -1rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+// -- Services PAGE --
+
+// HEADER
+#services-header {
+  padding-top: 1px;
+
+  h2 {
+    margin: 2rem auto;
+    text-align: center;
+  }
+}
+
+// SERVICES
+#services {
+  .service {
+    border: 1px solid $color-black;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+
+    i {
+      display: block;
+      font-size: 5rem;
+      color: $color-blue-main;
+      text-align: center;
+    }
+
+    h3 {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    ul {
+      list-style-position: inside;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+
+      li {
+        list-style-type: none;
+        font-size: 1.2rem;
+        margin: 0.7rem 0;
+
+        &::before {
+          content: "\f14a"; /* FontAwesome Unicode */
+          font-family: "FontAwesome";
+          color: $color-green-main;
+          display: inline-block;
+          margin-left: -1.3em; /* same as padding-left set on li */
+          width: 1.3em; /* same as padding-left set on li */
+        }
+      }
+    }
+
+    .price {
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-style: italic;
+    }
+  }
+}
+
+// -- service PAGEs (private tuition, proof reading, teaching resources)
+.service-header {
+  padding: 2rem 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 900;
+  }
+}
+
+.service-section {
+  article {
+    padding: 1rem 0rem 2rem;
+
+    &#why-me {
+      img {
+        width: 100vw;
+        margin-left: -1rem;
+      }
+
+      h3 {
+        margin: 1rem 0 2rem;
+      }
+
+      main {
+        p {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    .column {
+      // folder
+      .folder {
+        position: relative;
+        margin: 0.5rem 0;
+
+        & > p {
+          font-weight: 900;
+          padding-left: 2rem;
+          margin: 0 0;
+        }
+
+        &::before {
+          content: "";
+          font-family: "FontAwesome";
+          font-size: 1.3rem;
+          display: block;
+          position: absolute;
+          left: 0;
+        }
+
+        &.closed {
+          height: 1.5rem;
+          overflow: hidden;
+          &::before {
+            content: "\f07b";
+          }
+        }
+
+        &.opened {
+          &::before {
+            content: "\f07c";
+          }
+        }
+
+        // subfolder
+        .subfolder {
+          padding-left: 2rem;
+          margin: 0.3rem 0;
+          position: relative;
+
+          & > p {
+            font-weight: bold;
+            margin: 0 0 0 1rem;
+          }
+
+          &.closed {
+            height: 1.5rem;
+            overflow: hidden;
+
+            &::before {
+              content: "\f07b";
+              font-family: "FontAwesome";
+              font-size: 1.3rem;
+              display: block;
+              position: absolute;
+              left: 1rem;
+            }
+          }
+
+          &.opened {
+            &::before {
+              content: "\f07c";
+              font-family: "FontAwesome";
+              font-size: 1.3rem;
+              display: block;
+              position: absolute;
+              left: 1rem;
+            }
+          }
+
+          // file
+          .file {
+            padding-left: 0.4rem;
+            margin: 0.2rem 0;
+
+            & > p {
+              margin: 0 0 0 1rem;
+            }
+
+            &::before {
+              content: "";
+              font-family: "FontAwesome";
+              font-size: 1.3rem;
+              display: block;
+              position: absolute;
+              left: 2rem;
+            }
+
+            &.pdf::before {
+              content: "\f1c1";
+            }
+
+            &.doc::before {
+              content: "\f1c2";
+            }
+
+            &.xls::before {
+              content: "\f1c3";
+            }
+
+            &.ppt::before {
+              content: "\f1c4";
+            }
+
+            &.image::before {
+              content: "\f1c5";
+            }
+
+            &.unknown::before {
+              content: "\f15b";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.steps {
+  padding: 1rem;
+  background: $color-blue-main;
+  color: $color-white;
+
+  .step {
+    padding: 2rem 0;
+
+    header {
+      display: flex;
+      margin-bottom: 2rem;
+
+      i {
+        display: inline-block;
+        font-size: 2rem;
+        margin: 0 1rem 0 2rem;
+      }
+    }
+  }
+}
+
+// -- Contact PAGE --
+#contact-header {
+  padding-top: 2rem;
+
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Contact Form
+#contact-form {
+  form {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    input {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0 1rem 0 calc(4rem);
+      height: 3.5rem;
+      font-size: 1rem;
+      font-family: "Overlock", cursive;
+      color: $color-blue-main;
+      border: solid 1px $color-black;
+
+      &:hover,
+      &:focus {
+        border: solid 1px $color-green-main;
+      }
+    }
+
+    // Icons & background
+
+    #name {
+      background: url("../images/contact/name-bg.svg") 100% / contain no-repeat, url("../images/contact/name-icon.svg") 1.5rem center no-repeat;
+      // background-color: #ffffff;
+    }
+
+    #email {
+      background: url("../images/contact/email-bg.svg") 98% / contain no-repeat, url("../images/contact/email-icon.svg") 1.3rem center no-repeat;
+      // background-color: #ffffff;
+    }
+
+    #subject {
+      background: url("../images/contact/subject-bg.svg") 97% / contain no-repeat, url("../images/contact/subject-icon.svg") 1.5rem center no-repeat;
+      // background-color: #ffffff;
+    }
+
+    #phone {
+      background: url("../images/contact/phone-bg.svg") 94% / contain no-repeat, url("../images/contact/phone-icon.svg") 1.5rem center no-repeat;
+      // background-color: #ffffff;
+    }
+
+    textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      height: 14rem;
+      font-size: 1rem;
+      font-family: "Overlock", cursive;
+      color: $color-blue-main;
+      border: solid 1px $color-blue-main;
+
+      background: url("../images/contact/message-icon.svg") 1.5rem 90% no-repeat, url("../images/contact/message-bg.svg") 100% / contain no-repeat;
+      // background-color: #ffffff;
+
+      &:hover,
+      &:focus {
+        border: solid 1px $color-green-main;
+      }
+    }
+
+    button {
+      height: 3rem;
+      width: calc(50% - 0.65rem);
+      margin-top: 0.5rem;
+      font-family: "Overlock", cursive;
+      font-size: 1rem;
+      color: $color-black;
+      border: none;
+      background: $color-green-main;
+
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        border: solid 1px $color-blue-main;
+      }
+    }
+  }
+}

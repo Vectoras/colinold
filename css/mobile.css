@@ -1,0 +1,647 @@
+/* General */
+html,
+body,
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  background: #eefbf8;
+  color: #08211b;
+}
+
+p,
+a {
+  font-size: 1.2rem;
+  font-family: "Overlock", cursive;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+  font-weight: normal;
+  color: #245f7f;
+  padding: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
+
+a {
+  color: #d05353;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#main-nav {
+  background: #1d4d67;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#main-nav .container #logo {
+  display: block;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+#main-nav .container #logo img {
+  width: 11rem;
+}
+
+#main-nav .container #button-menu-mobile {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background: url("/images/icons/mobile-menu-close.svg");
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+}
+
+#main-nav .container #nav-buttons {
+  margin-top: 3rem;
+}
+
+#main-nav .container #nav-buttons a {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ebcb63;
+  font-size: 2rem;
+  font-family: "Cinzel", serif;
+}
+
+#main-nav .container #nav-buttons a.active {
+  text-decoration: underline;
+}
+
+#main-nav.menu-hidden {
+  height: 100px;
+}
+
+#main-nav.menu-hidden #button-menu-mobile {
+  background: url("/images/icons/mobile-menu-open.svg");
+}
+
+#hero-section {
+  height: calc(100vh - 100px);
+  padding-top: 17rem;
+  background: lightgray;
+}
+
+#hero-section p {
+  font-size: 1.5rem;
+}
+
+#hero-section h1 {
+  padding: 0.5rem 0;
+}
+
+#hero-section p:last-of-type {
+  display: none;
+}
+
+#hero-section #services-buttons {
+  display: none;
+}
+
+#stats {
+  background: #1d4d67;
+  color: #eefbf8;
+}
+
+#stats .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+#stats .container .stat {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+#stats .container .stat i {
+  display: block;
+  font-size: 5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+#stats .container .stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#stats .container .stat-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#success-stories {
+  padding-bottom: 1rem;
+}
+
+#success-stories .success-story p {
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+#success-stories .success-story img {
+  width: 100vw;
+  margin-left: -1rem;
+}
+
+#success-stories .success-story:last-child p {
+  margin-bottom: 0;
+}
+
+#testimonials-container i {
+  display: none;
+}
+
+#testimonials-container #testimonials {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  overflow-x: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#testimonials-container #testimonials .testimonial {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  padding: 1rem 1rem 2rem;
+  text-align: center;
+}
+
+#testimonials-container #testimonials .testimonial-message {
+  font-family: "Dancing Script", cursive;
+  color: #3183af;
+  font-size: 1.5rem;
+}
+
+#testimonials-container #testimonials .testimonial-name {
+  margin-top: 1rem;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+}
+
+#main-footer {
+  background: #1d4d67;
+  color: #eefbf8;
+  padding: 2rem 0 0;
+}
+
+#main-footer section#main-footer-left {
+  display: none;
+}
+
+#main-footer section h3 {
+  width: 100%;
+  text-align: center;
+}
+
+#main-footer section .main-footer-content {
+  width: 14rem;
+  margin: 0 auto;
+}
+
+#main-footer section .main-footer-content a {
+  display: block;
+  color: #eefbf8;
+}
+
+#main-footer section .main-footer-content p,
+#main-footer section .main-footer-content a {
+  margin: 0.5rem 0;
+}
+
+#main-footer-middle h3 {
+  margin: 0 0 2rem;
+}
+
+#main-footer-right h3 {
+  margin: 3rem 0 2rem;
+}
+
+#main-footer-credit {
+  margin: 2rem 1rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eefbf8;
+}
+
+#main-footer-credit p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#about-me {
+  padding-top: 1px;
+}
+
+#about-me article h2 {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#about-me article img {
+  display: block;
+  width: 10rem;
+  margin: 0 auto 2rem;
+}
+
+#about-me article p {
+  margin: 0.5rem 0;
+}
+
+#outside-of-school {
+  padding-top: 1px;
+}
+
+#outside-of-school h2 {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#outside-of-school article {
+  margin-bottom: 3rem;
+}
+
+#outside-of-school article img {
+  width: 100vw;
+  margin: 0 0 0.5rem -1rem;
+}
+
+#outside-of-school article p {
+  margin: 0.5rem 0;
+}
+
+#services-header {
+  padding-top: 1px;
+}
+
+#services-header h2 {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#services .service {
+  border: 1px solid #08211b;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
+}
+
+#services .service i {
+  display: block;
+  font-size: 5rem;
+  color: #1d4d67;
+  text-align: center;
+}
+
+#services .service h3 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#services .service ul {
+  list-style-position: inside;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+#services .service ul li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  margin: 0.7rem 0;
+}
+
+#services .service ul li::before {
+  content: "\f14a";
+  /* FontAwesome Unicode */
+  font-family: "FontAwesome";
+  color: #29b797;
+  display: inline-block;
+  margin-left: -1.3em;
+  /* same as padding-left set on li */
+  width: 1.3em;
+  /* same as padding-left set on li */
+}
+
+#services .service .price {
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#services .service a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.service-header {
+  padding: 2rem 0;
+}
+
+.service-header h2 {
+  text-align: center;
+}
+
+.service-header p {
+  text-align: center;
+  font-weight: 900;
+}
+
+.service-section article {
+  padding: 1rem 0rem 2rem;
+}
+
+.service-section article#why-me img {
+  width: 100vw;
+  margin-left: -1rem;
+}
+
+.service-section article#why-me h3 {
+  margin: 1rem 0 2rem;
+}
+
+.service-section article#why-me main p {
+  margin: 0.5rem 0;
+}
+
+.service-section article .column .folder {
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+.service-section article .column .folder > p {
+  font-weight: 900;
+  padding-left: 2rem;
+  margin: 0 0;
+}
+
+.service-section article .column .folder::before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.service-section article .column .folder.closed {
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.service-section article .column .folder.closed::before {
+  content: "\f07b";
+}
+
+.service-section article .column .folder.opened::before {
+  content: "\f07c";
+}
+
+.service-section article .column .folder .subfolder {
+  padding-left: 2rem;
+  margin: 0.3rem 0;
+  position: relative;
+}
+
+.service-section article .column .folder .subfolder > p {
+  font-weight: bold;
+  margin: 0 0 0 1rem;
+}
+
+.service-section article .column .folder .subfolder.closed {
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.service-section article .column .folder .subfolder.closed::before {
+  content: "\f07b";
+  font-family: "FontAwesome";
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 1rem;
+}
+
+.service-section article .column .folder .subfolder.opened::before {
+  content: "\f07c";
+  font-family: "FontAwesome";
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 1rem;
+}
+
+.service-section article .column .folder .subfolder .file {
+  padding-left: 0.4rem;
+  margin: 0.2rem 0;
+}
+
+.service-section article .column .folder .subfolder .file > p {
+  margin: 0 0 0 1rem;
+}
+
+.service-section article .column .folder .subfolder .file::before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 2rem;
+}
+
+.service-section article .column .folder .subfolder .file.pdf::before {
+  content: "\f1c1";
+}
+
+.service-section article .column .folder .subfolder .file.doc::before {
+  content: "\f1c2";
+}
+
+.service-section article .column .folder .subfolder .file.xls::before {
+  content: "\f1c3";
+}
+
+.service-section article .column .folder .subfolder .file.ppt::before {
+  content: "\f1c4";
+}
+
+.service-section article .column .folder .subfolder .file.image::before {
+  content: "\f1c5";
+}
+
+.service-section article .column .folder .subfolder .file.unknown::before {
+  content: "\f15b";
+}
+
+.steps {
+  padding: 1rem;
+  background: #1d4d67;
+  color: #eefbf8;
+}
+
+.steps .step {
+  padding: 2rem 0;
+}
+
+.steps .step header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.steps .step header i {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 1rem 0 2rem;
+}
+
+#contact-header {
+  padding-top: 2rem;
+}
+
+#contact-header h2,
+#contact-header p {
+  margin: 0;
+  padding: 0;
+}
+
+#contact-form form {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#contact-form form input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0 1rem 0 calc(4rem);
+  height: 3.5rem;
+  font-size: 1rem;
+  font-family: "Overlock", cursive;
+  color: #1d4d67;
+  border: solid 1px #08211b;
+}
+
+#contact-form form input:hover, #contact-form form input:focus {
+  border: solid 1px #29b797;
+}
+
+#contact-form form #name {
+  background: url("../images/contact/name-bg.svg") 100%/contain no-repeat, url("../images/contact/name-icon.svg") 1.5rem center no-repeat;
+}
+
+#contact-form form #email {
+  background: url("../images/contact/email-bg.svg") 98%/contain no-repeat, url("../images/contact/email-icon.svg") 1.3rem center no-repeat;
+}
+
+#contact-form form #subject {
+  background: url("../images/contact/subject-bg.svg") 97%/contain no-repeat, url("../images/contact/subject-icon.svg") 1.5rem center no-repeat;
+}
+
+#contact-form form #phone {
+  background: url("../images/contact/phone-bg.svg") 94%/contain no-repeat, url("../images/contact/phone-icon.svg") 1.5rem center no-repeat;
+}
+
+#contact-form form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  height: 14rem;
+  font-size: 1rem;
+  font-family: "Overlock", cursive;
+  color: #1d4d67;
+  border: solid 1px #1d4d67;
+  background: url("../images/contact/message-icon.svg") 1.5rem 90% no-repeat, url("../images/contact/message-bg.svg") 100%/contain no-repeat;
+}
+
+#contact-form form textarea:hover, #contact-form form textarea:focus {
+  border: solid 1px #29b797;
+}
+
+#contact-form form button {
+  height: 3rem;
+  width: calc(50% - 0.65rem);
+  margin-top: 0.5rem;
+  font-family: "Overlock", cursive;
+  font-size: 1rem;
+  color: #08211b;
+  border: none;
+  background: #29b797;
+}
+
+#contact-form form button:first-of-type {
+  margin-right: 1rem;
+}
+
+#contact-form form button:hover, #contact-form form button:focus {
+  cursor: pointer;
+  border: solid 1px #1d4d67;
+}

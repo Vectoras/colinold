@@ -1,0 +1,240 @@
+@import "config";
+
+/* General */
+
+p,
+a {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.button {
+  font-size: 1.2rem;
+}
+
+/* Utilities */
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: $website-width;
+  margin: 0 auto;
+  // background: blue;
+}
+
+// MAIN NAV
+#main-nav {
+  .container {
+    // logo
+    #logo {
+      img {
+        max-width: 12rem;
+      }
+    }
+  }
+}
+
+// -- Home PAGE --
+#hero-section {
+  .hero-positioning {
+    width: 100%;
+
+    .container {
+      h1 {
+        width: calc((#{$website-width} - 4rem) / 12 * 7 - 1rem); // 7 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+      }
+
+      p {
+        width: calc((#{$website-width} - 4rem) / 12 * 7 - 1rem); // 7 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+      }
+
+      #services-buttons {
+        justify-content: space-between;
+        width: calc((#{$website-width} - 4rem) / 12 * 7 - 1rem); // 7 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+
+        .button {
+          padding: 1.5rem 2rem;
+        }
+      }
+    }
+  }
+}
+
+// STATS
+#stats {
+  .stat {
+    max-width: 15rem;
+
+    i {
+      font-size: 5rem;
+      line-height: 6rem;
+      grid-row: 1 / span 1;
+      // background: blue;
+    }
+
+    &-number {
+      font-size: 5rem;
+    }
+  }
+}
+
+// SUCCESS STORIES
+#success-stories {
+  .success-story {
+    img {
+      // margin-left: 0; // canceling margin set on mobile for img
+      margin: 0 calc((#{$website-width} - 4rem) / 12);
+      height: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem);
+      width: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem); // 4 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+    }
+
+    p {
+      width: calc((#{$website-width} - 4rem) / 12 * 6 - 1rem);
+    }
+  }
+}
+
+// TESTIMONIALS
+#testimonials-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  // chevrons
+  i {
+    display: block;
+    font-size: 2rem;
+    color: $color-green-main;
+    text-align: center;
+    cursor: pointer;
+    width: 10%;
+
+    &:hover {
+      color: $color-green-dark-1;
+    }
+  }
+
+  #testimonials {
+    width: 80%;
+  }
+}
+
+// FOOTER
+#main-footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  section {
+    // only display on computer
+    &#main-footer-left {
+      display: block;
+    }
+  }
+
+  &-left {
+    p {
+      font-weight: bold;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &-credit {
+    grid-column: 1 / span 3;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// -- About Me PAGE --
+
+// OUTSIDE OF SCHOOL
+#outside-of-school {
+  article {
+    img {
+      margin: 0 calc((#{$website-width} - 4rem) / 12);
+      height: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem);
+      width: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem); // 4 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+    }
+
+    main {
+      width: calc((#{$website-width} - 4rem) / 12 * 6 - 1rem);
+    }
+
+    h3 {
+      margin: 0 calc((#{$website-width} - 4rem) / 12);
+      width: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem); // 4 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+    }
+  }
+}
+
+// -- Services PAGE --
+
+// SERVICES
+#services {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .service {
+    width: 30%;
+  }
+}
+
+// -- service PAGEs (private tuition, proof reading, teaching resources)
+
+.service-header {
+  h2 {
+    margin-right: 8rem;
+  }
+}
+
+.service-section {
+  article {
+    margin-bottom: 5rem;
+    &#why-me {
+      img {
+        height: calc((#{$website-width} - 4rem) / 12 * 5 - 1rem);
+        width: calc((#{$website-width} - 4rem) / 12 * 5 - 1rem); // 5 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
+      }
+    }
+  }
+}
+
+.steps {
+  margin-top: 8rem;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+
+  .step {
+    padding: 0;
+    width: auto;
+    margin: 0;
+
+    header {
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: flex-start;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+    }
+  }
+}
