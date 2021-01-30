@@ -192,6 +192,10 @@ h3 {
   width: 30%;
 }
 
+#services .service h3 {
+  min-height: 5.5rem;
+}
+
 .service-header h2 {
   margin-right: 8rem;
 }
