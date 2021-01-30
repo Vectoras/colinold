@@ -19,7 +19,8 @@ body {
 }
 
 p,
-a {
+a,
+li {
   font-size: 1.2rem;
   font-family: "Overlock", cursive;
 }
@@ -554,15 +555,18 @@ textarea {
                 content: "\f1c1";
               }
 
-              &.doc::before {
+              &.doc::before,
+              &.docx::before {
                 content: "\f1c2";
               }
 
-              &.xls::before {
+              &.xls::before,
+              &.xlsx::before {
                 content: "\f1c3";
               }
 
-              &.ppt::before {
+              &.ppt::before,
+              &.pptx::before {
                 content: "\f1c4";
               }
 

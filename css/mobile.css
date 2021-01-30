@@ -15,7 +15,8 @@ body {
 }
 
 p,
-a {
+a,
+li {
   font-size: 1.2rem;
   font-family: "Overlock", cursive;
 }
@@ -534,15 +535,15 @@ textarea {
   content: "\f1c1";
 }
 
-.service-section article#teaching-resources-list main .folder .subfolder .file.doc::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.doc::before, .service-section article#teaching-resources-list main .folder .subfolder .file.docx::before {
   content: "\f1c2";
 }
 
-.service-section article#teaching-resources-list main .folder .subfolder .file.xls::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.xls::before, .service-section article#teaching-resources-list main .folder .subfolder .file.xlsx::before {
   content: "\f1c3";
 }
 
-.service-section article#teaching-resources-list main .folder .subfolder .file.ppt::before {
+.service-section article#teaching-resources-list main .folder .subfolder .file.ppt::before, .service-section article#teaching-resources-list main .folder .subfolder .file.pptx::before {
   content: "\f1c4";
 }
 
