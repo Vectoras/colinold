@@ -67,7 +67,15 @@
               <div id="paypal-button-container"></div>
             </div>
           </div>
-          <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP" data-sdk-integration-source="button-factory"></script>
+          <div id="smart-button-container">
+            <div style="text-align: center">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+          <script
+            src="https://www.paypal.com/sdk/js?client-id=AbTm9X7kd2aw0Gx6Vkx8rekTR7zR98qClKot3JL8PaUSW6dYL2kGQlmfxHKk1LkH7_3Iayjgl-0vzCU0&currency=GBP"
+            data-sdk-integration-source="button-factory"
+          ></script>
           <script>
             function initPayPalButton() {
               paypal
@@ -81,16 +89,7 @@
 
                   createOrder: function (data, actions) {
                     return actions.order.create({
-                      purchase_units: [
-                        {
-                          description: "Resources for teaching English",
-                          amount: {
-                            currency_code: "GBP",
-                            value: 9.95,
-                            breakdown: { item_total: { currency_code: "GBP", value: 8.29 }, shipping: { currency_code: "GBP", value: 0 }, tax_total: { currency_code: "GBP", value: 1.66 } },
-                          },
-                        },
-                      ],
+                      purchase_units: [{ description: "Resources for teaching English", amount: { currency_code: "GBP", value: 9.95 } }],
                     });
                   },
 
