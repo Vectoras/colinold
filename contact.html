@@ -47,12 +47,13 @@
     <main>
       <!-- Contact Form -->
       <section id="contact-form" class="container">
-        <form action="#">
+        <form name="Contact" action="POST" data-netlify="true">
           <input type="text" name="name" id="name" placeholder="Your full name ..." />
           <input type="text" name="email" id="email" placeholder="Your email ..." />
           <input type="text" name="subject" id="subject" placeholder="The subject of your message ..." />
           <input type="text" name="phone" id="phone" placeholder="Your phone number ..." />
           <textarea name="message" id="message" placeholder="Start typing your message here ..."></textarea>
+          <!-- <div data-netlify-recaptcha="true"></div> -->
           <button type="submit" name="submit" id="submit" placeholder="Send">Send</button>
           <button type="reset" name="reset" id="reset" placeholder="Reset">Reset</button>
         </form>
