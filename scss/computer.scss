@@ -2,7 +2,8 @@
 
 /* General */
 
-p {
+p,
+a {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
@@ -214,9 +215,21 @@ h3 {
 
   .service {
     width: 30%;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto auto auto;
 
     h3 {
       min-height: 5.5rem;
+      align-self: start;
+    }
+
+    ul {
+      align-self: flex-start;
+    }
+
+    .price,
+    & > a {
+      align-self: flex-end;
     }
   }
 }

@@ -1,5 +1,6 @@
 /* General */
-p {
+p,
+a {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
@@ -189,10 +190,28 @@ h3 {
 
 #services .service {
   width: 30%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto 1fr auto auto auto;
+      grid-template-rows: auto auto auto 1fr auto auto auto;
 }
 
 #services .service h3 {
   min-height: 5.5rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+#services .service ul {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#services .service .price,
+#services .service > a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .service-header h2 {
