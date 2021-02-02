@@ -193,6 +193,13 @@ textarea {
   padding-bottom: 1rem;
 }
 
+#success-stories h2 {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0;
+  text-align: center;
+}
+
 #success-stories .success-story p {
   padding-top: 0.5rem;
   margin-bottom: 2rem;
