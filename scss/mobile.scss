@@ -66,6 +66,50 @@ textarea {
   padding-right: 1rem;
 }
 
+.button {
+  display: inline block;
+  padding: 1rem 2rem;
+  font-family: "Overlock", cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: $color-black;
+  border: none;
+  position: relative;
+  transition: background-color 0.5s ease-in-out, color 0.2s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-green-main;
+    transition: width 1s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-green-main;
+    transition: width 1s ease-in-out;
+  }
+
+  &:hover {
+    background: $color-green-main;
+    color: $color-white;
+
+    &::after,
+    &::before {
+      background: $color-white;
+      width: 0;
+    }
+  }
+}
 // MAIN NAV
 #main-nav {
   background: $color-blue-main;
@@ -136,24 +180,40 @@ textarea {
 // HERO
 #hero-section {
   height: calc(100vh - 100px);
-  padding-top: 17rem;
+  padding-bottom: 4rem;
   background: lightgray;
 
-  p {
-    font-size: 1.5rem;
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
 
-  h1 {
-    padding: 0.5rem 0;
+  .hero-positioning {
+    p {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      padding: 0.5rem 0;
+    }
   }
 
   // hidding some elements on mobile due to not enough space
   p:last-of-type {
-    display: none;
+    @media (max-height: 799px) {
+      display: none;
+    }
   }
 
   #services-buttons {
-    display: none;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+      padding: 1rem 0.5rem;
+      text-align: center;
+      margin: 0 0.1rem;
+    }
   }
 }
 

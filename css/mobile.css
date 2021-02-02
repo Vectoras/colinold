@@ -61,6 +61,53 @@ textarea {
   padding-right: 1rem;
 }
 
+.button {
+  display: inline block;
+  padding: 1rem 2rem;
+  font-family: "Overlock", cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #08211b;
+  border: none;
+  position: relative;
+  -webkit-transition: background-color 0.5s ease-in-out, color 0.2s;
+  transition: background-color 0.5s ease-in-out, color 0.2s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #29b797;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #29b797;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.button:hover {
+  background: #29b797;
+  color: #eefbf8;
+}
+
+.button:hover::after, .button:hover::before {
+  background: #eefbf8;
+  width: 0;
+}
+
 #main-nav {
   background: #1d4d67;
   position: relative;
@@ -122,24 +169,48 @@ textarea {
 
 #hero-section {
   height: calc(100vh - 100px);
-  padding-top: 17rem;
+  padding-bottom: 4rem;
   background: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-#hero-section p {
+#hero-section .hero-positioning p {
   font-size: 1.5rem;
 }
 
-#hero-section h1 {
+#hero-section .hero-positioning h1 {
   padding: 0.5rem 0;
 }
 
-#hero-section p:last-of-type {
-  display: none;
+@media (max-height: 799px) {
+  #hero-section p:last-of-type {
+    display: none;
+  }
 }
 
 #hero-section #services-buttons {
-  display: none;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#hero-section #services-buttons .button {
+  padding: 1rem 0.5rem;
+  text-align: center;
+  margin: 0 0.1rem;
 }
 
 #stats {

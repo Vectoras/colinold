@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", function(){
           testimonialsParent.scrollTo(scrollPosition,0);
 
           currentTestimonial ++;
+
+          if (currentTestimonial === nrOfTestimonials)
+            buttonRight.classList.add("end"); // adding disabled appearence to right button when last item
+          
+          buttonLeft.classList.remove("end"); // removing disabled appearence to left button if there
         }
       }
   
@@ -76,6 +81,11 @@ document.addEventListener("DOMContentLoaded", function(){
           testimonialsParent.scrollTo(scrollPosition,0);
 
           currentTestimonial --;
+
+          if (currentTestimonial === 1)
+            buttonLeft.classList.add("end"); // adding disabled appearence to left button when last item
+          
+          buttonRight.classList.remove("end"); // removing disabled appearence to right button if there
         }
       }
   
@@ -83,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function(){
       // adding event to the buttons
       const buttonLeft = document.querySelector("#testimonials-container").querySelector(".fa-chevron-left");
       const buttonRight = document.querySelector("#testimonials-container").querySelector(".fa-chevron-right");
+
+      buttonLeft.classList.add("end"); // disabled appearence for left button to begin with
   
       buttonLeft.addEventListener("click", previousTestimonial);
       buttonRight.addEventListener("click", nextTestimonial);

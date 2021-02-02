@@ -48,8 +48,11 @@ h3 {
 
 // -- Home PAGE --
 #hero-section {
+  justify-content: center;
+
   .hero-positioning {
     width: 100%;
+    margin-bottom: 0;
 
     .container {
       h1 {
@@ -121,7 +124,8 @@ h3 {
     cursor: pointer;
     width: 10%;
 
-    &:hover {
+    &:hover,
+    &.end {
       color: $color-green-dark-1;
     }
   }

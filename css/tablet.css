@@ -22,57 +22,14 @@ h3 {
   font-size: 1.75rem;
 }
 
-.button {
-  display: inline block;
-  padding: 1rem 2rem;
-  font-family: "Overlock", cursive;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #08211b;
-  border: none;
-  position: relative;
-  -webkit-transition: background-color 0.5s ease-in-out, color 0.2s;
-  transition: background-color 0.5s ease-in-out, color 0.2s;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #29b797;
-  -webkit-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-}
-
-.button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: #29b797;
-  -webkit-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-}
-
-.button:hover {
-  background: #29b797;
-  color: #eefbf8;
-}
-
-.button:hover::after, .button:hover::before {
-  background: #eefbf8;
-  width: 0;
-}
-
 /* Utilities */
 .container {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.button {
+  font-size: 1.2rem;
 }
 
 #main-nav {
@@ -172,11 +129,11 @@ h3 {
   padding-top: 0;
   position: relative;
   background: lightsteelblue;
+  padding-bottom: 0;
 }
 
 #hero-section .hero-positioning {
-  position: absolute;
-  bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 #hero-section .hero-positioning .container h1 {
@@ -194,15 +151,12 @@ h3 {
 
 #hero-section .hero-positioning .container #services-buttons {
   margin-top: 7.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 #hero-section .hero-positioning .container #services-buttons .button {
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem 2.5rem;
 }
 
 #stats .container {
