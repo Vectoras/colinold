@@ -21,7 +21,7 @@ function getDPR () {
 // enclosed scope
 (function () {
 
-// before page load
+// before page loads
 document.addEventListener("DOMContentLoaded", function(){
 
   // collecting data about device
@@ -140,9 +140,9 @@ document.addEventListener("DOMContentLoaded", function(){
       for (let i=0; i<subfolderList.length; i++) {
         subfolderList[i].classList.remove("opened");
         subfolderList[i].classList.add("closed");
-        subfolderList[i].style.cursor = "pointer";
+        subfolderList[i].firstElementChild.style.cursor = "pointer";
         
-        subfolderList[i].addEventListener ("click", function (e) {
+        subfolderList[i].firstElementChild.addEventListener ("click", function (e) {
 
           e.stopPropagation(); // prevent toggeling parent or child folders/subfolders
 
@@ -165,9 +165,9 @@ document.addEventListener("DOMContentLoaded", function(){
       for (let i = 0; i<folderList.length; i++) {
         folderList[i].classList.remove("opened");
         folderList[i].classList.add("closed");
-        folderList[i].style.cursor = "pointer";
+        folderList[i].firstElementChild.style.cursor = "pointer";
 
-        folderList[i].addEventListener ("click", function (e) {
+        folderList[i].firstElementChild.addEventListener ("click", function (e) {
 
           e.stopPropagation();
 

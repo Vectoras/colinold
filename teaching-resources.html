@@ -53,17 +53,42 @@
       <section class="service-section container">
         <!-- Why me -->
         <article id="why-me">
-          <img src="/images/image.svg" alt="Proof reading by Colin Old" />
+          <picture>
+            <!-- Computer -->
+            <source media="(min-width: 1200px) and (min-resolution: 3.1dppx)" srcset="/images/services/teaching-resources-computer-4x.jpg" />
+            <source media="(min-width: 1200px) and (min-resolution: 2.1dppx)" srcset="/images/services/teaching-resources-computer-3x.jpg" />
+            <source media="(min-width: 1200px) and (min-resolution: 1.1dppx)" srcset="/images/services/teaching-resources-computer-2x.jpg" />
+            <source media="(min-width: 1200px)" srcset="/images/services/teaching-resources-computer-1x.jpg" />
+
+            <!-- Tablet -->
+            <source media="(min-width: 768px) and (min-resolution: 3.1dppx)" srcset="/images/services/teaching-resources-4x.jpg" />
+            <source media="(min-width: 768px) and (min-resolution: 2.1dppx)" srcset="/images/services/teaching-resources-tablet-3x.jpg" />
+            <source media="(min-width: 768px) and (min-resolution: 1.1dppx)" srcset="/images/services/teaching-resources-tablet-2x.jpg" />
+            <source media="(min-width: 768px)" srcset="/images/services/teaching-resources-tablet-1x.jpg" />
+
+            <!-- Mobile -->
+            <source media="(min-resolution: 3.1dppx)" srcset="/images/services/teaching-resources-tablet-4x.jpg" />
+            <source media="(min-resolution: 2.1dppx)" srcset="/images/services/teaching-resources-tablet-3x.jpg" />
+            <source media="(min-resolution: 1.1dppx)" srcset="/images/services/teaching-resources-tablet-2x.jpg" />
+            <source media="(min-resolution: 1dppx)" srcset="/images/services/teaching-resources-tablet-1x.jpg" />
+
+            <img src="/images/about-me/travel-computer-1x.jpg" alt="Traveling | Colin Old" />
+          </picture>
 
           <main>
             <h3>Why Me</h3>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque augue turpis facilisis viverra tempor dictum at quis hendrerit. Velit varius etiam ultricies elementum. Sit felis netus
-              elit egestas orci, quis malesuada metus. Viverra blandit enim tortor, vel porttitor purus. Amet dignissim tellus ultrices ipsum, sit in. Ultricies eros at duis vitae phasellus duis.
-              Cursus molestie vestibulum nulla quam morbi dui nibh viverra vestibulum.
+              Over the past 35+ years of my teaching career, I have generated countless resources in all areas of English teaching, especially English Literature. I have a deep love for poetry and how
+              to make it accessible to young people. My Masters dissertation concerned how boys react to poetry, and included classwork activities which would promote confidence and enjoyment of this
+              medium. I am keen to share my ideas of teaching in the classroom with others, with activities which I have found highly successful. I offer my experience at a minimal one-time payment,
+              but as I continue to build my resource bank electronically, you will be given access. I still teach part-time, so this will be on-going!
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ullam ducimus itaque voluptates reiciendis veniam labore architecto alias fuga harum.</p>
+            <p>
+              If you scroll down on this page, you will see examples of how my resources will be accessed. Folders appear with generic titles covering English areas, such as Grammar Basics, Poetry
+              Notes or Shakespeare. Within these, are drop-down icons providing ideas for more specific texts or lessons. After you make your one-time payment, feel free to edit the resources as
+              appropriate.
+            </p>
           </main>
         </article>
 
@@ -173,10 +198,21 @@
         <div id="testimonials">
           <article class="testimonial">
             <p class="testimonial-message">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam, ac pellentesque velit ornare. Dolor risus, massa sollicitudin risus elementum. Ornare et mattis amet, pharetra,
-              placerat aliquam justo, scelerisque ultrices."
+              "I consider myself very fortunate to have met Mr. Old as he helped me so much with my English. Due to him I have improving my vocabulary a lot and he patiently showed me how to spell or
+              pronounce every word I found difficult. I had people not believing me when I told them I have been in this country for only one year."
             </p>
-            <p class="testimonial-name">Lauren Wood</p>
+            <div class="testimonial-name">
+              <picture>
+                <!-- Computer, Tablet & Mobile -->
+                <source media="(min-resolution: 3.1dppx)" srcset="/images/testimonials/Ionut-4x.png" />
+                <source media="(min-resolution: 2.1dppx)" srcset="/images/testimonials/Ionut-3x.png" />
+                <source media="(min-resolution: 1.1dppx)" srcset="/images/testimonials/Ionut-2x.png" />
+
+                <img src="/images/testimonials/Ionut-1x.png" alt="Ionut Boghean" />
+              </picture>
+
+              <p>Ionut Boghean</p>
+            </div>
           </article>
 
           <article class="testimonial">
@@ -184,12 +220,12 @@
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis aliquam elit aliquet enim non augue. Nulla lectus hendrerit venenatis pulvinar elit sit adipiscing eget. Molestie pharetra
               turpis ut ultrices nibh tellus sollicitudin tortor."
             </p>
-            <p class="testimonial-name">Christian Young</p>
+            <div class="testimonial-name"><p>Christian Young</p></div>
           </article>
 
           <article class="testimonial">
             <p class="testimonial-message">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat at natoque odio hendrerit ut. Sem auctor mi iaculis sagittis egestas massa viverra.”</p>
-            <p class="testimonial-name">Robert Brown</p>
+            <div class="testimonial-name"><p>Robert Brown</p></div>
           </article>
         </div>
         <i class="fas fa-chevron-right"></i>

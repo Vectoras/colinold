@@ -290,9 +290,13 @@ h3 {
   line-height: 2.5rem;
 }
 
-#testimonials-container #testimonials .testimonial-name {
-  margin-top: 3rem;
+#testimonials-container #testimonials .testimonial-name p {
   font-size: 1.7rem;
+}
+
+#testimonials-container #testimonials .testimonial-name img {
+  width: 6.25rem;
+  height: 6.25rem;
 }
 
 #main-footer {
@@ -387,6 +391,8 @@ h3 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: text;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 #outside-of-school article h3 {
@@ -449,6 +455,9 @@ h3 {
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse nowrap;
           flex-flow: row-reverse nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .service-section article#why-me img {
@@ -456,9 +465,6 @@ h3 {
   width: calc((100vw - 4rem) / 12 * 5 - 1rem);
   margin: 0;
   background: lightgray;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .service-section article#why-me main {

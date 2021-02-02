@@ -241,12 +241,25 @@ textarea {
         font-family: "Dancing Script", cursive;
         color: $color-blue-light-2;
         font-size: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       &-name {
-        margin-top: 1rem;
-        font-family: "Cinzel", serif;
-        font-weight: bold;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          font-family: "Cinzel", serif;
+          font-weight: bold;
+        }
+
+        img {
+          width: 4rem;
+          height: 4rem;
+          margin: 1rem;
+        }
       }
     }
   }

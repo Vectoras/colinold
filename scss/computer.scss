@@ -190,7 +190,7 @@ h3 {
   article {
     img {
       margin: 0 calc((#{$website-width} - 4rem) / 12);
-      height: calc((#{$website-width} - 4rem) / 12 & 4 - 1rem);
+      height: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem);
       width: calc((#{$website-width} - 4rem) / 12 * 4 - 1rem); // 4 columns on a grid with 12 columns, a gutter or 1rem, and margins of 2rem
     }
 
