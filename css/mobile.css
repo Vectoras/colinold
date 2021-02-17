@@ -170,7 +170,7 @@ textarea {
 #hero-section {
   height: calc(100vh - 100px);
   padding-bottom: 4rem;
-  background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 19rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/65% no-repeat;
+  background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 17rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/65% no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,7 +185,25 @@ textarea {
 
 @media (max-height: 799px) {
   #hero-section {
+    background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 14rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
+  }
+}
+
+@media (max-height: 799px) and (max-width: 390px) {
+  #hero-section {
     background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 15rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
+  }
+}
+
+@media (max-width: 473px) {
+  #hero-section {
+    background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 19rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
+  }
+}
+
+@media (max-width: 473px) and (max-width: 390px) {
+  #hero-section {
+    background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 20rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
   }
 }
 
