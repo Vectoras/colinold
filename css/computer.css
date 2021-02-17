@@ -38,6 +38,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url("/images/hero-computer-1x.png") 90% 3rem/30% no-repeat;
 }
 
 #hero-section .hero-positioning {

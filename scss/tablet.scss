@@ -120,8 +120,9 @@ h3 {
 #hero-section {
   padding-top: 0;
   position: relative;
-  background: lightsteelblue;
   padding-bottom: 0;
+
+  background: url("/images/hero-table-computer-1x.jpg") left bottom / 100% 22rem no-repeat, url("/images/hero-computer-1x.png") 90% 5rem / 45% no-repeat;
 
   .hero-positioning {
     margin-bottom: 5rem;
