@@ -2,8 +2,7 @@
 html,
 body,
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -70,7 +69,6 @@ textarea {
   color: #08211b;
   border: none;
   position: relative;
-  -webkit-transition: background-color 0.5s ease-in-out, color 0.2s;
   transition: background-color 0.5s ease-in-out, color 0.2s;
 }
 
@@ -82,7 +80,6 @@ textarea {
   width: 100%;
   height: 2px;
   background: #29b797;
-  -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
 }
 
@@ -94,7 +91,6 @@ textarea {
   width: 100%;
   height: 2px;
   background: #29b797;
-  -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
 }
 
@@ -116,7 +112,6 @@ textarea {
   height: 100vh;
   overflow: hidden;
   z-index: 101;
-  -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
 
@@ -169,29 +164,28 @@ textarea {
 
 #hero-section {
   height: calc(100vh - 100px);
-  padding-bottom: 4rem;
-  background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 17rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/65% no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 2rem 0 4rem;
+  background: url("/images/hero/hero-mobile-1x.png") 60% 40vh/55% no-repeat;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 
-@media (max-height: 799px) {
+@media screen and (min-resolution: 3.1dppx) {
   #hero-section {
-    background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 14rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
+    background-image: url("/images/hero/hero-tablet-4x.png");
   }
 }
 
-@media (max-height: 799px) and (max-width: 390px) {
+@media screen and (min-resolution: 2.1dppx) {
   #hero-section {
-    background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 15rem no-repeat, url("/images/hero-computer-1x.png") 95% 1rem/55% no-repeat;
+    background-image: url("/images/hero/hero-tablet-3x.png");
+  }
+}
+
+@media screen and (min-resolution: 1.1dppx) {
+  #hero-section {
+    background-image: url("/images/hero/hero-tablet-2x.png");
   }
 }
 
@@ -223,12 +217,8 @@ textarea {
 
 #hero-section #services-buttons {
   margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #hero-section #services-buttons .button {
@@ -243,34 +233,22 @@ textarea {
 }
 
 #stats .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
 #stats .container .stat {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 3fr;
-      grid-template-columns: 2fr 3fr;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto;
   justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 2rem 0;
 }
 
 #stats .container .stat i {
   display: block;
   font-size: 5rem;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
 }
 
@@ -317,23 +295,14 @@ textarea {
   width: 100%;
   margin: 3rem 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
   overflow-x: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #testimonials-container #testimonials .testimonial {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   padding: 1rem 1rem 2rem;
   text-align: center;
 }
@@ -346,19 +315,10 @@ textarea {
 }
 
 #testimonials-container #testimonials .testimonial-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #testimonials-container #testimonials .testimonial-name p {
@@ -570,7 +530,6 @@ textarea {
 .service-section article#teaching-resources-list main .folder {
   position: relative;
   margin: 0.5rem 0;
-  -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
 
@@ -606,7 +565,6 @@ textarea {
   padding-left: 2rem;
   margin: 0.3rem 0;
   position: relative;
-  -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
 
@@ -690,8 +648,6 @@ textarea {
 }
 
 .steps .step header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 2rem;
 }

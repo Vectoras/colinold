@@ -122,7 +122,17 @@ h3 {
   position: relative;
   padding-bottom: 0;
 
-  background: url("/images/hero-table-computer-1x.jpg") left bottom / 100% 22rem no-repeat, url("/images/hero-computer-1x.png") 90% 5rem / 45% no-repeat;
+  background: url("/images/hero/hero-tablet-1x.png") 90% 5rem / auto 45% no-repeat;
+
+  @media screen and (min-resolution: 3.1dppx) {
+    background-image: url("/images/hero/hero-tablet-4x.png");
+  }
+  @media screen and (min-resolution: 2.1dppx) {
+    background-image: url("/images/hero/hero-tablet-3x.png");
+  }
+  @media screen and (min-resolution: 1.1dppx) {
+    background-image: url("/images/hero/hero-tablet-2x.png");
+  }
 
   .hero-positioning {
     margin-bottom: 5rem;

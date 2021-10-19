@@ -39,19 +39,10 @@ h3 {
 
 #main-nav .container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #main-nav .container.menu-hidden {
@@ -65,9 +56,7 @@ h3 {
 #main-nav .container #logo {
   display: block;
   margin: 0 2rem 0 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 11rem;
-          flex: 1 1 11rem;
+  flex: 1 1 11rem;
 }
 
 #main-nav .container #logo img {
@@ -77,19 +66,10 @@ h3 {
 #main-nav .container #nav-buttons {
   margin-top: 0;
   width: 33rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33rem;
-          flex: 0 0 33rem;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex: 0 0 33rem;
 }
 
 #main-nav .container #nav-buttons a {
@@ -113,7 +93,6 @@ h3 {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -129,7 +108,25 @@ h3 {
   padding-top: 0;
   position: relative;
   padding-bottom: 0;
-  background: url("/images/hero-table-computer-1x.jpg") left bottom/100% 22rem no-repeat, url("/images/hero-computer-1x.png") 90% 5rem/45% no-repeat;
+  background: url("/images/hero/hero-tablet-1x.png") 90% 5rem/auto 45% no-repeat;
+}
+
+@media screen and (min-resolution: 3.1dppx) {
+  #hero-section {
+    background-image: url("/images/hero/hero-tablet-4x.png");
+  }
+}
+
+@media screen and (min-resolution: 2.1dppx) {
+  #hero-section {
+    background-image: url("/images/hero/hero-tablet-3x.png");
+  }
+}
+
+@media screen and (min-resolution: 1.1dppx) {
+  #hero-section {
+    background-image: url("/images/hero/hero-tablet-2x.png");
+  }
 }
 
 #hero-section .hero-positioning {
@@ -151,8 +148,7 @@ h3 {
 
 #hero-section .hero-positioning .container #services-buttons {
   margin-top: 7.5rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 #hero-section .hero-positioning .container #services-buttons .button {
@@ -160,20 +156,14 @@ h3 {
 }
 
 #stats .container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
 
 #stats .container .stat {
   width: 25%;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 4fr 5fr;
-      grid-template-rows: 4fr 5fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 5fr;
   justify-items: center;
   padding: 2rem 0;
 }
@@ -182,8 +172,6 @@ h3 {
   display: block;
   line-height: 5rem;
   font-size: 3.5rem;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1 / span 1;
 }
 
@@ -195,8 +183,6 @@ h3 {
 #stats .container .stat-text {
   font-size: 1.5rem;
   text-align: center;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
@@ -206,27 +192,17 @@ h3 {
 }
 
 #success-stories .success-story {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 3.5rem 0;
 }
 
 #success-stories .success-story:nth-child(odd) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 #success-stories .success-story:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse nowrap;
-          flex-flow: row-reverse nowrap;
+  flex-flow: row-reverse nowrap;
 }
 
 #success-stories .success-story img {
@@ -254,12 +230,9 @@ h3 {
 }
 
 #main-footer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
 #main-footer section .main-footer-content {
@@ -271,8 +244,6 @@ h3 {
 }
 
 #main-footer-credit {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
@@ -282,15 +253,10 @@ h3 {
 }
 
 #about-me article {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-items: center;
 }
 
 #about-me article h2 {
@@ -306,8 +272,6 @@ h3 {
 
 #about-me article p {
   margin: 0.5rem 0;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
@@ -325,7 +289,6 @@ h3 {
 #outside-of-school article {
   margin-bottom: 0;
   padding: 3rem 0;
-  display: -ms-grid;
   display: grid;
   grid-row-gap: 1rem;
 }
@@ -334,37 +297,28 @@ h3 {
   margin: 0 calc((100vw - 4rem) / 12);
   height: calc((100vw - 4rem) / 12 * 4 - 1rem);
   width: calc((100vw - 4rem) / 12 * 4 - 1rem);
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: image;
 }
 
 #outside-of-school article main {
   width: calc((100vw - 4rem) / 12 * 6 - 1rem);
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
   grid-area: text;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 #outside-of-school article h3 {
   margin: 0 calc((100vw - 4rem) / 12);
   width: calc((100vw - 4rem) / 12 * 4 - 1rem);
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  align-self: flex-end;
   grid-area: title;
 }
 
 #outside-of-school article:nth-child(odd) {
-      grid-template-areas: "text title" "text image";
+  grid-template-areas: "text title" "text image";
 }
 
 #outside-of-school article:nth-child(even) {
-      grid-template-areas: "title text" "image text";
+  grid-template-areas: "title text" "image text";
 }
 
 #services-header h2 {
@@ -380,12 +334,8 @@ h3 {
 .service-header {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .service-header h2 {
@@ -402,16 +352,9 @@ h3 {
 }
 
 .service-section article#why-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse nowrap;
-          flex-flow: row-reverse nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row-reverse nowrap;
+  align-items: center;
 }
 
 .service-section article#why-me img {
@@ -439,16 +382,9 @@ h3 {
 
 .service-section article#teaching-resources-list main {
   padding: 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .service-section article#teaching-resources-list main .folder {
@@ -481,13 +417,9 @@ h3 {
 }
 
 .steps .step header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .steps .step header i {
@@ -497,16 +429,12 @@ h3 {
 }
 
 #contact-form form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 1rem;
 }
 
 #contact-form form textarea {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
