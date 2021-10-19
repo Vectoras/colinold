@@ -54,10 +54,10 @@ h3 {
   @media screen and (min-resolution: 3.1dppx) {
     background-image: url("/images/hero/hero-computer-4x.png");
   }
-  @media screen and (min-resolution: 2.1dppx) {
+  @media screen and (min-resolution: 2.1dppx) and (max-resolution: 3dppx) {
     background-image: url("/images/hero/hero-computer-3x.png");
   }
-  @media screen and (min-resolution: 1.1dppx) {
+  @media screen and (min-resolution: 1.1dppx) and (max-resolution: 2dppx) {
     background-image: url("/images/hero/hero-computer-2x.png");
   }
 

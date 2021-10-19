@@ -108,6 +108,7 @@ h3 {
   padding-top: 0;
   position: relative;
   padding-bottom: 0;
+  justify-content: flex-end;
   background: url("/images/hero/hero-tablet-1x.png") 90% 5rem/auto 45% no-repeat;
 }
 
@@ -117,13 +118,13 @@ h3 {
   }
 }
 
-@media screen and (min-resolution: 2.1dppx) {
+@media screen and (min-resolution: 2.1dppx) and (max-resolution: 3dppx) {
   #hero-section {
     background-image: url("/images/hero/hero-tablet-3x.png");
   }
 }
 
-@media screen and (min-resolution: 1.1dppx) {
+@media screen and (min-resolution: 1.1dppx) and (max-resolution: 2dppx) {
   #hero-section {
     background-image: url("/images/hero/hero-tablet-2x.png");
   }
