@@ -20,6 +20,20 @@ function getDPR() {
 (function () {
   // before page loads
   document.addEventListener("DOMContentLoaded", function () {
+    // dynamically update the years of experience
+    {
+      const yearsOfTeachingEl = document.querySelector("#years-teaching");
+      const yearsOfTuitionEl = document.querySelector("#years-tuition");
+      const yearsOfMarkingEl = document.querySelector("#years-marking");
+
+      const currentYear = Number(new Date().getFullYear());
+      console.log(currentYear);
+
+      yearsOfTeachingEl.textContent = currentYear - 1983;
+      yearsOfTuitionEl.textContent = currentYear - 1986;
+      yearsOfMarkingEl.textContent = currentYear - 1993;
+    }
+
     // collecting data about device
     let device = {
       type: deviceType(),
@@ -57,7 +71,9 @@ function getDPR() {
         // functions
         function nextTestimonial() {
           if (currentTestimonial < nrOfTestimonials) {
-            scrollPosition += parseInt(window.getComputedStyle(testimonials[currentTestimonial - 1]).getPropertyValue("width"));
+            scrollPosition += parseInt(
+              window.getComputedStyle(testimonials[currentTestimonial - 1]).getPropertyValue("width")
+            );
             testimonialsParent.scrollTo(scrollPosition, 0);
 
             currentTestimonial++;
@@ -70,7 +86,9 @@ function getDPR() {
 
         function previousTestimonial() {
           if (currentTestimonial > 1) {
-            scrollPosition -= parseInt(window.getComputedStyle(testimonials[currentTestimonial - 1]).getPropertyValue("width"));
+            scrollPosition -= parseInt(
+              window.getComputedStyle(testimonials[currentTestimonial - 1]).getPropertyValue("width")
+            );
             testimonialsParent.scrollTo(scrollPosition, 0);
 
             currentTestimonial--;
